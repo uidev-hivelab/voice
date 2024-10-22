@@ -18,6 +18,7 @@ recordButton.addEventListener("click", () => {
       // 데이터가 수집될 때마다 audioChunks에 저장
       mediaRecorder.ondataavailable = (event) => {
         audioChunks.push(event.data);
+        console.log(event.data);
       };
 
       // 녹음 종료 시 Blob으로 파일 생성
