@@ -24,7 +24,7 @@ recordButton.addEventListener("click", () => {
       mediaRecorder.onstop = () => {
         audioBlob = new Blob(audioChunks, { type: "audio/wav" });
         const audioUrl = URL.createObjectURL(audioBlob);
-        console.log(audioBlob);
+        console.log(mediaRecorder.state);
 
         // 다운로드 링크 설정
         downloadLink.href = audioUrl;
