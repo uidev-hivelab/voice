@@ -18,13 +18,13 @@ recordButton.addEventListener("click", () => {
       // 데이터가 수집될 때마다 audioChunks에 저장
       mediaRecorder.ondataavailable = (event) => {
         audioChunks.push(event.data);
-        console.log(event.data);
       };
 
       // 녹음 종료 시 Blob으로 파일 생성
       mediaRecorder.onstop = () => {
         audioBlob = new Blob(audioChunks, { type: "audio/wav" });
         const audioUrl = URL.createObjectURL(audioBlob);
+        console.log(audioBlob);
 
         // 다운로드 링크 설정
         downloadLink.href = audioUrl;
@@ -36,9 +36,6 @@ recordButton.addEventListener("click", () => {
         stopButton.disabled = true;
         recordButton.disabled = false;
         sendButton.disabled = false;
-        console.log(audioUrl);
-        console.log(mediaRecorder);
-        
       };
 
       // 녹음 시작
