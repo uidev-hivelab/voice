@@ -35,6 +35,7 @@ recordButton.addEventListener("click", () => {
         stopButton.disabled = true;
         recordButton.disabled = false;
         sendButton.disabled = false;
+        console.log(audioUrl);
         console.log(mediaRecorder);
         
       };
