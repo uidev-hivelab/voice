@@ -71,7 +71,7 @@ function arrayBufferToBase64(buffer) {
   }
   
   // playerUID를 동적으로 전달할 수 있도록 설정, 기본값은 158
-  const playerUID = 158;  // 필요에 따라 이 값을 변경할 수 있습니다
+  const playerUID = 896;  // 필요에 따라 이 값을 변경할 수 있습니다
   
   sendButton.addEventListener('click', () => {
     if (audioBlob) {
